@@ -21,6 +21,7 @@ router.get('/books/add', (req, res, next) => {
 });
 
 router.get('/books/:id', (req, res, next) => {
+	console.log(req.params)
 	console.log(req.params.id)
 	const bookId = req.params.id
 	Book.findById(bookId)
